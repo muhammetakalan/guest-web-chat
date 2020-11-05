@@ -1,0 +1,81 @@
+body {
+	background-image: url("bg.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	word-wrap: break-word;
+}
+h2 {
+	font-family: Quicksand;
+}
+img {
+	height: auto;
+	width: 100%;
+}
+span {
+	cursor: pointer;
+}
+progress {
+	position: absolute;
+	display: none;
+	width: 100%;
+	height: 9px;
+	left: 0px;
+	border: 0;
+	top: 0px;
+}
+.alert {
+	position: absolute;
+	margin-left: -125px;
+	display: none;
+	width: 250px;
+	left: 50%;
+}
+.main {
+	height: 93%;
+}
+.card-body {
+	max-height: 100%;
+	overflow-y: auto;
+}
+#fileButton {
+	display: none;
+}
+.writemessageArea {
+	margin-bottom: 0px;
+	position: fixed;
+	width: 100%;
+	bottom: 0px;
+	left: 0px;
+}
+.chatScreen {
+	display: none;
+}
+.incomingMessage {
+	width: calc(100%);
+	text-align: left;
+	font-size: 14px;
+	padding: 0.3em;
+	display: flex;
+	color: #000;
+}
+.incomingMessage div {
+	border-radius: 15px 15px 15px 5px;
+	background-color: #ff3333;
+	padding: 11px;
+}
+.outgoingMessage {
+	justify-content: flex-end;
+	width: calc(100%);
+	text-align: left;
+	font-size: 14px;
+	padding: 0.3em;
+	display: flex;
+	color: #000;
+}
+.outgoingMessage div {
+	border-radius: 15px 15px 5px 15px;
+	background-color: #00cc47;
+	padding: 11px;
+}

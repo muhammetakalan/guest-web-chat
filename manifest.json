@@ -1,0 +1,12 @@
+{
+	"lang":"tr",
+	"name":"guest-web-chat",
+	"icons":[
+		{
+			"src":"./favicon.ico",
+			"sizes":"128x128"
+		}
+	],
+	"display":"standalone",
+	"background_color":"#343A40"
+}

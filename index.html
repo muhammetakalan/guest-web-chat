@@ -1,0 +1,64 @@
+<html lang="tr-TR">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="favicon.ico">
+  <title>guest-web-chat</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="manifest" href="manifest.json"/>
+  <script src="https://code.jquery.com/jquery-3.5.0.slim.min.js"></script>
+  <script src="https://kit.fontawesome.com/8e49e77197.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
+    <strong>Dosya yüklendi</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="main text-center">
+    <div class="card-body">
+      <h2 class="p-4 text-white">ZİYARETCİ SOHBET</h2>
+      <progress id="uploader" value="0" max="100"></progress>
+      <div id="loginScreen">
+        <input id="kadi" class="form-control col-6 m-auto" placeholder="Kullanıcı Adı" autofocus onkeydown="13==event.keyCode&&registerMember()">
+        <br>
+        <button class="btn btn-primary" type="submit" onclick="registerMember()">Katıl</button>
+      </div>
+      <div id="chatScreen" class="chatScreen">
+        <div id="messageArea"></div>
+        <div class="writemessageArea input-group">
+          <div class="input-group-prepend">
+            <span id="fileUpload" class="input-group-text attach_btn"><i class="fa fa-photo-video"></i></span>
+            <input id="fileButton" type="file">
+            <span class="input-group-text attach_btn" data-toggle="modal" data-target="#historyModal"><i class="fa fa-history"></i></span>
+          </div>
+          <input id="msg" class="form-control" placeholder="Mesaj Yazınız" onkeydown="13==event.keyCode&&sendMessage()">
+          <div class="input-group-append">
+            <span class="input-group-text attach_btn" onclick="sendMessage()"><i class="fa fa-paper-plane"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="historyModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Son girişler</h4>
+          <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div id="modal-history" class="modal-body"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+  <script src="functions.js"></script>
+</body>
+</html>
