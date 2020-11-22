@@ -78,8 +78,7 @@ function registerMember() {
     });
     $("#loginScreen").hide();
     $("#chatScreen").show();
-    uploadChat();
-    uploadUser();
+    bring();
   } else {
     alert("Kullanıcı adını boş bırakmayın !");
   }
@@ -102,10 +101,10 @@ function sendMessage() {
     alert("Lütfen boş bırakmayın !");
   }
 }
-function uploadChat() {
-  var query = firebase.database().ref("guest-web-chat/messages");
+function bring() {
+  var ref_messages = firebase.database().ref("guest-web-chat/messages");
   var kadi = $("#kadi").val();
-  query.on('value', function(snapshot) {
+  ref_messages.on('value', function(snapshot) {
     $("#messageArea").html("");
     snapshot.forEach(function(childSnapshot) {
       var data = childSnapshot.val();
@@ -119,10 +118,8 @@ function uploadChat() {
       $(".card-body").scrollTop($('.card-body')[0].scrollHeight - $('.card-body')[0].clientHeight);
     });
   });
-}
-function uploadUser() {
-  var query = firebase.database().ref("guest-web-chat/users");
-  query.on('value', function(snapshot) {
+  var ref_users = firebase.database().ref("guest-web-chat/users");
+  ref_users.on('value', function(snapshot) {
    $("#modal-history").html("");
    snapshot.forEach(function(childSnapshot) {
     var data = childSnapshot.val(); {
