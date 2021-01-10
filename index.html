@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap">
   <link rel="stylesheet" href="style.css">
+  <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    };
+  </script>
 </head>
 <body>
   <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">

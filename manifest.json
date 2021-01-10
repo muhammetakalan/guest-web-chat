@@ -3,10 +3,12 @@
 	"name":"guest-web-chat",
 	"icons":[
 		{
-			"src":"./favicon.ico",
-			"sizes":"128x128"
+			"src": "pwa-152x152.png",
+			"sizes": "152x152",
+			"type": "image/png"
 		}
 	],
+	"start_url": "./index.html",
 	"display":"standalone",
 	"background_color":"#343A40"
 }
