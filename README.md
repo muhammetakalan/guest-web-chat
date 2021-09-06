@@ -1,3 +1,5 @@
-Open index.html file with browser
+# Screenshot
 
-Demo : https://05akalan57.github.io/guest-web-chat/
+<p align="center">
+	<img src="screenshot.png"/>
+</p>
