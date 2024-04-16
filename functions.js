@@ -4,20 +4,15 @@ fileUpload.addEventListener('click', function(e) {
   e.preventDefault();
   fileButton.click();
 });
-var config = {
-  databaseURL: "https://akalan-db.firebaseio.com",
-  storageBucket: "akalan-db.appspot.com"
-};
-firebase.initializeApp(config);
 var uploader = document.getElementById('uploader');
 var fileButton = document.getElementById('fileButton');
 fileButton.addEventListener('change', function(e) {
   var file = e.target.files[0];
   var storageRef = firebase.storage().ref(file.name);
-  var imageUrl = "<img height='500' src='https://firebasestorage.googleapis.com/v0/b/akalan-db.appspot.com/o/" + file.name + "?alt=media&token=e0a91dd8-1b7f-4574-b042-3780feaa13b5'>";
-  var videoUrl = "<video width='325' controls><source src='https://firebasestorage.googleapis.com/v0/b/akalan-db.appspot.com/o/" + file.name + "?alt=media&token=e0a91dd8-1b7f-4574-b042-3780feaa13b5'></video>";
-  var audioUrl = "<audio controls><source src='https://firebasestorage.googleapis.com/v0/b/akalan-db.appspot.com/o/" + file.name + "?alt=media&token=e0a91dd8-1b7f-4574-b042-3780feaa13b5'></audio>";
-  var undefinedUrl = "<div style='text-align: center; width: 150px; height: 80px;'>Bu dosya türü görüntülenemiyor !<br><a style='color:blue;'href='https://firebasestorage.googleapis.com/v0/b/akalan-db.appspot.com/o/" + file.name + "?alt=media&token=e0a91dd8-1b7f-4574-b042-3780feaa13b5'target='__blank'>İNDİR</a></div>";
+  var imageUrl = "<img height='500' src='https://firebasestorage.googleapis.com/v0/b/ba0d893de.appspot.com/o/" + file.name + "?alt=media&token=e0a91dd8-1b7f-4574-b042-3780feaa13b5'>";
+  var videoUrl = "<video width='325' controls><source src='https://firebasestorage.googleapis.com/v0/b/ba0d893de.appspot.com/o/" + file.name + "?alt=media&token=e0a91dd8-1b7f-4574-b042-3780feaa13b5'></video>";
+  var audioUrl = "<audio controls><source src='https://firebasestorage.googleapis.com/v0/b/ba0d893de.appspot.com/o/" + file.name + "?alt=media&token=e0a91dd8-1b7f-4574-b042-3780feaa13b5'></audio>";
+  var undefinedUrl = "<div style='text-align: center; width: 150px; height: 80px;'>Bu dosya türü görüntülenemiyor !<br><a style='color:blue;'href='https://firebasestorage.googleapis.com/v0/b/ba0d893de.appspot.com/o/" + file.name + "?alt=media&token=e0a91dd8-1b7f-4574-b042-3780feaa13b5'target='__blank'>İNDİR</a></div>";
   switch(file.type) {
     case "image/jpeg":
     case "image/png":
